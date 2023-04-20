@@ -24,8 +24,8 @@
   flex-wrap: wrap;
 }
 
-.search {
-  padding: 10px;
+.filter-btn {
+  margin: 10px;
 }
 
 .res-card {
