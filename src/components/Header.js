@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { LOGO_URL } from "../utils/constants";
 
 const Header = () => {
-  const [show, setShow] = useState("Login");
+  const [show, setShow] = useState("Login")
   return (
     <div className="header">
       <div className="logo-container">

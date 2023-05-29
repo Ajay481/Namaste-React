@@ -21,7 +21,7 @@ const Body = () => {
     console.log(json);
     //Optional Chaining
     setListOfRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-    setFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
+    setFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards)
   };
 
   //Conditional Rendering
