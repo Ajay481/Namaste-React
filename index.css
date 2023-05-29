@@ -43,3 +43,15 @@
 .food-logo {
   width: 100%;
 }
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shimmer-card {
+  width: 200px;
+  height: 400px;
+  margin: 10px;
+  background-color: #c6aeae;
+}
