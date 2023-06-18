@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   // Array Destructuring
@@ -8,6 +9,8 @@ const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
   const [searchText, setSearchText] = useState("");
+
+  // Whenever state variables update, react triggers a reconcilliation cycle(re-renders the component)
 
   useEffect(() => {
     fetchData();
@@ -21,7 +24,7 @@ const Body = () => {
     console.log(json);
     //Optional Chaining
     setListOfRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-    setFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards)
+    setFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
   };
 
   //Conditional Rendering
@@ -60,7 +63,12 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredRestaurant.map((restaurant) => (
-          <RestaurantCard key={restaurant?.data?.id} resData={restaurant} />
+          <Link
+            key={restaurant?.data?.id}
+            to={"/restaurants/" + restaurant?.data?.id}
+          >
+            <RestaurantCard resData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>

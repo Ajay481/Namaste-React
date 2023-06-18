@@ -36,7 +36,7 @@
   -Address
   -Contact
 
-Two types of Export/Import
+# Two types of Export/Import
 
 - Default Export/Import
 
@@ -48,6 +48,11 @@ import Component from "path";
 export const Component;
 import {Component} from "path";
 
-- React Hooks
+# React Hooks
 - useState
-- useEffect
+- useEffect 
+
+# 2 Types of Routing in web apps
+ - Client Side Routing
+ - Server Side Routing
+
