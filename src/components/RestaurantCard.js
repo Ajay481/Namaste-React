@@ -10,7 +10,7 @@ const RestaurantCard = (props) => {
     deliveryTime,
     costForTwo,
     avgRating,
-  } = resData?.data
+  } = resData?.data;
 
   return (
     <div className="res-card">
@@ -26,6 +26,21 @@ const RestaurantCard = (props) => {
       <h4>{costForTwo / 100} FOR TWO</h4>
     </div>
   );
+};
+
+// Higher Order Compoenent
+
+// input - RestaurantCard => RestaurantCardPromoted
+
+export const withPromotedLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label>PROMOTED</label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
 };
 
 export default RestaurantCard;
